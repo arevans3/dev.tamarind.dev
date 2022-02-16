@@ -38,8 +38,11 @@ body {
   opacity: 0.75;
 }
 
+/* disable hover for touchscreens */
+@media (hover) {
 .triangle:hover {
   opacity: 1;
+}
 }
 
 /* ordered clockwise, starting at the top left */
