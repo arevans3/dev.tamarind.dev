@@ -1,15 +1,19 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"> 
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<script src="patterns.js"></script>
+
 <html>
 
 <body>
-    <ul>
-        <li id="segment1" class="triangle-left"></li>
-        <li id="segment2" class="triangle-right"></li>
-        <li id="segment3" class="triangle-left"></li>
-        <li id="segment4" class="triangle-right"></li>
-        <li id="segment5" class="triangle-left"></li>
-        <li id="segment6" class="triangle-right"></li>
-    </ul>
+    <div id="hexagon">
+        <button id="teal-triangle" class="triangle top-left triangle" onclick="toggleSelected(this)"></button>
+        <button id="green-triangle" class="triangle top-right-triangle" onclick="toggleSelected(this)"></button>
+        <button id="orange-triangle" class="triangle mid-right-triangle" onclick="toggleSelected(this)"></button>
+        <button id="pink-triangle" class="triangle bottom-right-triangle" onclick="toggleSelected(this)"></button>
+        <button id="purple-triangle" class="triangle bottom-left-triangle" onclick="toggleSelected(this)"></button>
+        <button id="blue-triangle" class="triangle mid-left-triangle" onclick="toggleSelected(this)"></button>
+    </div>
 </body>
 
 </html>

@@ -1,12 +1,12 @@
 body {
-  background-color: rgb(42, 42, 42);
+  background-color: #2a2a2a;
 }
 
 :root {
   --hexagon-size: 800px;
 }
 
-ul {
+#hexagon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -17,8 +17,7 @@ ul {
   height: var(--hexagon-size);
 }
 
-ul li {
-  list-style: none;
+.triangle {
   position: absolute;
   width: calc(var(--hexagon-size) / 3);
   height: calc(var(--hexagon-size) / 3);
@@ -26,58 +25,76 @@ ul li {
   /* equilateral triangle */
   clip-path: polygon(86% 100%, 86% 0%, 0% 50%);
 
-  transition: 0.75s;
+  transition: 0.25s;
   overflow: hidden;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 
-ul li:hover {
+.triangle.selected {
+  opacity: 0.75;
+}
+
+.triangle:hover {
   opacity: 1;
 }
 
 /* ordered clockwise, starting at the top left */
-#segment1 {
+.top-left-triangle {
   top: 32.4%;
   left: 41%;
-  background: #008f89;
-}
-
-#segment2 {
-  top: 32.4%;
-  left: 59%;
-  background: #578c57;
-}
-
-#segment3 {
-  top: 50%;
-  left: 71.8%;
-  background: #9d7953;
-}
-
-#segment4 {
-  top: 67.6%;
-  left: 59%;
-  background: #ad6e78;
-}
-
-#segment5 {
-  top: 67.6%;
-  left: 41%;
-  background: #9a71a6;
-}
-
-#segment6 {
-  top: 50%;
-  left: 28.4%;
-  background: #5285a8;
-}
-
-/* <| */
-.triangle-left {
   transform: rotate(120deg);
 }
 
-/* |> */
-.triangle-right {
+#teal-triangle {
+  background-color: #008f89;
+}
+
+.top-right-triangle {
+  top: 32.4%;
+  left: 59%;
   transform: rotate(60deg);
+}
+
+#green-triangle {
+  background-color: #578c57;
+}
+
+.mid-right-triangle {
+  top: 50%;
+  left: 71.8%;
+  transform: rotate(120deg);
+}
+
+#orange-triangle {
+  background-color: #9d7953;
+}
+
+.bottom-right-triangle {
+  top: 67.6%;
+  left: 59%;
+  transform: rotate(60deg);
+}
+
+#pink-triangle {
+  background-color: #ad6e78;
+}
+
+.bottom-left-triangle {
+  top: 67.6%;
+  left: 41%;
+  transform: rotate(120deg);
+}
+
+#purple-triangle {
+  background-color: #9a71a6;
+}
+
+.mid-left-triangle {
+  top: 50%;
+  left: 28.4%;
+  transform: rotate(60deg);
+}
+
+#blue-triangle {
+  background-color: #5285a8;
 }
