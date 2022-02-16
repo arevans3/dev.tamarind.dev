@@ -7,12 +7,24 @@
 
 <body>
     <div id="hexagon">
-        <button id="teal-triangle" class="triangle top-left triangle" onclick="toggleSelected(this)"></button>
-        <button id="green-triangle" class="triangle top-right-triangle" onclick="toggleSelected(this)"></button>
-        <button id="orange-triangle" class="triangle mid-right-triangle" onclick="toggleSelected(this)"></button>
-        <button id="pink-triangle" class="triangle bottom-right-triangle" onclick="toggleSelected(this)"></button>
-        <button id="purple-triangle" class="triangle bottom-left-triangle" onclick="toggleSelected(this)"></button>
-        <button id="blue-triangle" class="triangle mid-left-triangle" onclick="toggleSelected(this)"></button>
+        <div class="triangle-wrap top-left-triangle">
+            <button id="teal-triangle" class="triangle" onclick="toggleSelected(this)"></button>
+        </div>
+        <div class="triangle-wrap top-right-triangle">
+            <button id="green-triangle" class="triangle" onclick="toggleSelected(this)"></button>
+        </div>
+        <div class="triangle-wrap mid-right-triangle">
+            <button id="orange-triangle" class="triangle" onclick="toggleSelected(this)"></button>
+        </div>
+        <div class="triangle-wrap bottom-right-triangle">
+            <button id="pink-triangle" class="triangle" onclick="toggleSelected(this)"></button>
+        </div>
+        <div class="triangle-wrap bottom-left-triangle">
+            <button id="purple-triangle" class="triangle" onclick="toggleSelected(this)"></button>
+        </div>
+        <div class="triangle-wrap mid-left-triangle">
+            <button id="blue-triangle" class="triangle" onclick="toggleSelected(this)"></button>
+        </div>
     </div>
 </body>
 

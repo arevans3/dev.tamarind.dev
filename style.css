@@ -17,6 +17,10 @@ body {
   height: var(--hexagon-size);
 }
 
+.triangle-wrap {
+  position: absolute;
+}
+
 .triangle {
   position: absolute;
   width: calc(var(--hexagon-size) / 3);
@@ -97,4 +101,16 @@ body {
 
 #blue-triangle {
   background-color: #5285a8;
+}
+
+.glow {
+  animation: glow 0.75s;
+}
+
+@keyframes glow {
+  0% {}
+  25% {filter: drop-shadow(1px 1px 1px #fff);}
+  50% {filter: drop-shadow(2px 2px 2px #fff);}
+  75% {filter: drop-shadow(3px 3px 3px #fff);}
+  100% {filter: drop-shadow(4px 4px 4px #fff);}
 }
