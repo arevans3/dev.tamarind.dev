@@ -126,12 +126,12 @@ body {
 
 @keyframes rotate-left {
   0% {transform: rotate(120deg) scale(1)}
-  50% {transform: rotate(300deg) scale(1.25)}
+  50% {transform: rotate(390deg) scale(1.25)}
   100% {transform: rotate(480deg) scale(1)}
 }
 
 @keyframes rotate-right {
   0% {transform: rotate(60deg) scale(1)}
-  50% {transform: rotate(240deg) scale(1.25)}
+  50% {transform: rotate(330deg) scale(1.25)}
   100% {transform: rotate(420deg) scale(1)}
 }
