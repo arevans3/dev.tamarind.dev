@@ -19,23 +19,26 @@ body {
 
 .triangle-wrap {
   position: absolute;
+  width: calc(var(--hexagon-size) / 3);
+  height: calc(var(--hexagon-size) / 3);
+  margin: calc(var(--hexagon-size) / -6);
+  overflow: hidden;
 }
 
 .triangle {
   position: absolute;
   width: calc(var(--hexagon-size) / 3);
   height: calc(var(--hexagon-size) / 3);
-  margin: calc(var(--hexagon-size) / -6);
   /* equilateral triangle */
   clip-path: polygon(86% 100%, 86% 0%, 0% 50%);
-
-  transition: 0.25s;
+  transition: opacity 0.20s;
+  transition-timing-function: ease-out;
   overflow: hidden;
-  opacity: 0.25;
+  opacity: 0.4;
 }
 
 .triangle.selected {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 /* disable hover for touchscreens */
@@ -49,7 +52,6 @@ body {
 .top-left-triangle {
   top: 32.4%;
   left: 41%;
-  transform: rotate(120deg);
 }
 
 #teal-triangle {
@@ -106,14 +108,32 @@ body {
   background-color: #5285a8;
 }
 
-.glow {
-  animation: glow 0.75s;
+.point-left {
+  transform: rotate(120deg);
 }
 
-@keyframes glow {
-  0% {}
-  25% {filter: drop-shadow(1px 1px 1px #fff);}
-  50% {filter: drop-shadow(2px 2px 2px #fff);}
-  75% {filter: drop-shadow(3px 3px 3px #fff);}
-  100% {filter: drop-shadow(4px 4px 4px #fff);}
+.point-right {
+  transform: rotate(60deg);
+}
+
+.point-left.rotate {
+  animation: rotate-left 1.5s;
+}
+
+.point-right.rotate {
+  animation: rotate-right 1.5s;
+}
+
+@keyframes rotate-left {
+  0% {transform: rotate(120deg) scale(1)}
+  50% {transform: rotate(450deg) scale(1.2)}
+  75% {transform: rotate(465deg) scale(1.1)}
+  100% {transform: rotate(480deg) scale(1)}
+}
+
+@keyframes rotate-right {
+  0% {transform: rotate(60deg) scale(1)}
+  50% {transform: rotate(390deg) scale(1.2)}
+  75% {transform: rotate(405deg) scale(1.1)}
+  100% {transform: rotate(420deg) scale(1)}
 }

@@ -17,27 +17,34 @@ function checkSecrets() {
     var selectedIds =  selectedElements.map(function(elem) {
         return elem.id;
     })
+    const rotateDuration = 1000
     for (var secret of secrets) {
         var pattern = secret.pattern
         if (pattern.length === selectedIds.length && pattern.every((value, index) => value === selectedIds[index])) {
-            var delay = 1000;
-            patternGlow(selectedElements, delay)
+            rotateElements(selectedElements, rotateDuration)
+            clearSelected(selectedElements, rotateDuration)
             break;
         }
     }
 }
 
-function patternGlow(selectedElements, delay) {
-    var triangleWraps = selectedElements.map(function(elem) {
+function rotateElements(elements, duration) {
+    var triangleWraps = elements.map(function(elem) {
         return elem.parentElement
     })
 
-    triangleWraps.forEach((elem) => {elem.classList.add("glow")})
+    triangleWraps.forEach((elem) => {elem.classList.add("rotate")})
 
+    // after <duration>ms remove rotate
+    setTimeout(function () {
+        triangleWraps.forEach((elem) => {elem.classList.remove("rotate")})
+    }, duration);
+}
+
+function clearSelected(elements, delay) {
     // after <delay>ms clear selected
     setTimeout(function () {
-        triangleWraps.forEach((elem) => {elem.classList.remove("glow")})
-        selectedElements.forEach((elem) => {
+        elements.forEach((elem) => {
             elem.classList.remove("selected");
         });
     }, delay);
