@@ -17,7 +17,7 @@ function checkSecrets() {
     var selectedIds =  selectedElements.map(function(elem) {
         return elem.id;
     })
-    const rotateDuration = 1000
+    const rotateDuration = 1500
     for (var secret of secrets) {
         var pattern = secret.pattern
         if (pattern.length === selectedIds.length && pattern.every((value, index) => value === selectedIds[index])) {

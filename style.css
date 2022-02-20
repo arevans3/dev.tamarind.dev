@@ -117,23 +117,21 @@ body {
 }
 
 .point-left.rotate {
-  animation: rotate-left 1.5s;
+  animation: rotate-left 1.5s linear;
 }
 
 .point-right.rotate {
-  animation: rotate-right 1.5s;
+  animation: rotate-right 1.5s linear;
 }
 
 @keyframes rotate-left {
   0% {transform: rotate(120deg) scale(1)}
-  50% {transform: rotate(450deg) scale(1.2)}
-  75% {transform: rotate(465deg) scale(1.1)}
+  50% {transform: rotate(300deg) scale(1.25)}
   100% {transform: rotate(480deg) scale(1)}
 }
 
 @keyframes rotate-right {
   0% {transform: rotate(60deg) scale(1)}
-  50% {transform: rotate(390deg) scale(1.2)}
-  75% {transform: rotate(405deg) scale(1.1)}
+  50% {transform: rotate(240deg) scale(1.25)}
   100% {transform: rotate(420deg) scale(1)}
 }
